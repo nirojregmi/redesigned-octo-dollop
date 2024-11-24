@@ -11,4 +11,5 @@ Cybersecurity and data privacy-2024- Blended
 14.11.2024, 3h, Watched lecture recording and did some labs
 
 17.11.2024, 2h, completed the assignment (Introduction to the portswigger environment)
+
 18.11.2024, 2h lecture, and assignment
