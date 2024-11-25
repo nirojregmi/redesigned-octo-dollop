@@ -15,3 +15,5 @@ Cybersecurity and data privacy-2024- Blended
 18.11.2024, 2h lecture, and assignment
 
 24.11.2024, 4h, project phase 1. (unfortunately unsuccessful and could not submit)
+
+25.112024, 2h, lecture
