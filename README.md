@@ -17,3 +17,5 @@ Cybersecurity and data privacy-2024- Blended
 24.11.2024, 4h, project phase 1. (unfortunately unsuccessful and could not submit)
 
 25.112024, 2h, lecture
+
+26.11.2024,3h, cisco networking academy
