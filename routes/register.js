@@ -15,8 +15,9 @@ const registerSchema = z.object({
 });
 
 // Helper function to check if a username (email) already exists
-async function isUniqueUsername(email) {
-    const result = await client.queryArray(`SELECT username FROM zephyr_users WHERE username = $1`, [email]);
+async function isUniqueUsername(username) {
+    const result = await client.queryArray(`SELECT username FROM zephyr_users WHERE username = $1`, [username]);
+    //const result = await client.queryArray(`SELECT username FROM zephyr_users WHERE username = ${email}`);
     return result.rows.length === 0;
 }
 
