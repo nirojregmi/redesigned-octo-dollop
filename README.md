@@ -21,3 +21,5 @@ Cybersecurity and data privacy-2024- Blended
 25.112024, 2h, lecture
 
 26.11.2024,3h, cisco networking academy
+
+30.11.2024, 4h, working with project phase-2
