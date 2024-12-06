@@ -1,6 +1,31 @@
 import { serve } from "https://deno.land/std@0.199.0/http/server.ts";
 import { registerUser } from "./routes/register.js";
+import { loginUser } from "./routes/login.js";
+import { handleIndex, handleDefaultIndex } from "./routes/indexPage.js";
 
+
+let connectionInfo = {};
+
+// In-memory session store (replace with a database in production)
+const sessionStore = new Map();
+
+// Middleware to set security headers globally
+async function addSecurityHeaders(req, handler) {
+    const response = await handler(req);
+
+    // Set security headers
+    response.headers.set("Content-Security-Policy",
+        "default-src 'self'; " +
+        "script-src 'self'; " +
+        "style-src 'self'; " +
+        "img-src 'self'; " +
+        "frame-ancestors 'none'; " +
+        "form-action 'self';"); // Allow form submissions only to your domain
+    response.headers.set("X-Frame-Options", "DENY"); // Prevent Clickjacking
+    response.headers.set("X-Content-Type-Options", "nosniff"); // Prevent MIME type sniffing
+
+    return response;
+}
 
 // Serve static files
 async function serveStaticFile(path, contentType) {
@@ -26,6 +51,11 @@ async function handler(req) {
     }
 
 
+    // Route: Index page
+    if (url.pathname === "/" && req.method === "GET") { 
+        return await handleDefaultIndex(req);
+    }
+
 
     // Route: Registration page
     if (url.pathname === "/register" && req.method === "GET") {
@@ -36,6 +66,17 @@ async function handler(req) {
     if (url.pathname === "/register" && req.method === "POST") {
         const formData = await req.formData();
         return await registerUser(formData);
+    }
+
+    // Route: Login page
+    if (url.pathname === "/login" && req.method === "GET") {
+        return await serveStaticFile("./views/login.html", "text/html");
+    }
+
+    // Route: Handle user login
+    if (url.pathname === "/login" && req.method === "POST") {
+        const formData = await req.formData();
+        return await loginUser(formData,connectionInfo);
     }
 
     // Default response for unknown routes
@@ -59,7 +100,12 @@ function getContentType(filePath) {
     return mimeTypes[ext] || "application/octet-stream";
 }
 
+// Start the server with middleware
+async function mainHandler(req, info) {
+    connectionInfo = info;
+    return await addSecurityHeaders(req, handler);
+}
 
-serve(handler, { port: 8000 });
+serve(mainHandler, { port: 8000 });
 
 // Run: deno run --allow-net --allow-env --allow-read --watch app.js
