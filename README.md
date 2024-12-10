@@ -27,3 +27,7 @@ Cybersecurity and data privacy-2024- Blended
 06.12.2024, 6h, working with phase 1, and 2 including watched videos from different lectures.
 
 08.12.2024, 3h, phase 3 (ongoing)
+
+10.12.2024, 3h, working with phase 2 and phase 3
+
+
