@@ -11,10 +11,6 @@
 # Pages
 1. http://localhost:8000/register --> GET and POST
 2. http://localhost:8000/login --> GET and POST
-3. http://localhost:8000/logout --> GET
-4. http://localhost:8000/resources --> GET and POST
-5. http://localhost:8000/reservation --> GET and POST
-6. http://localhost:8000/resourcesList --> GET
 
 # redesigned-octo-dollop
 Cybersecurity and data privacy-2024- Blended
