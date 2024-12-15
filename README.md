@@ -31,9 +31,11 @@ Cybersecurity and data privacy-2024- Blended
 
 04.11.2024, 2h, Github repository, Logbook created.
 
-07.11.2024, 2h, Introduction to cybersecurity.
+07.11.2024, 3h, Introduction to cybersecurity.
 
 14.11.2024, 3h, Watched lecture recording and did some labs
+
+16.11.2024, 4h, Introduction to cybersecurity
 
 17.11.2024, 3h, completed the assignment (Introduction to the portswigger environment)
 
@@ -46,6 +48,8 @@ Cybersecurity and data privacy-2024- Blended
 26.11.2024,4h, cisco networking academy
 
 30.11.2024, 5h, working with project phase-2
+
+02.12.2024, 3h, Introduction to cybersecurity
 
 06.12.2024, 6h, working with phase 1, and 2 including watched videos from different lectures.
 
