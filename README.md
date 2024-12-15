@@ -55,4 +55,5 @@ Cybersecurity and data privacy-2024- Blended
 
 12.12.2024, 2h, working with final report.
 
+15.12.2024, 3, Modified phase 2 work and worked with the final report
 
